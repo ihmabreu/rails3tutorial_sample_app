@@ -1,0 +1,6 @@
+1-
+def myshuffle(s)
+	s.split('').shuffle[0..8].join
+
+end
+
