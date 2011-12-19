@@ -6,8 +6,8 @@ gem 'gravatar_image_tag', '1.0.0.pre2'
 
 group :development do
   gem 'rspec-rails', '2.6.1'
-  gem 'redgreen'
-  gem 'annotate', '2.4.0' ### dont't WORK  !!!!
+  #gem 'redgreen'   ### dont't WORK  !!!!
+  #gem 'annotate', '2.4.0' ### dont't WORK  !!!!
   #gem 'mynyml-redgreen'
 end
 
@@ -18,7 +18,7 @@ group :test do
   gem 'autotest', '4.4.6'
   gem 'autotest-rails-pure', '4.1.2'
   gem 'ZenTest'
-  gem 'redgreen'
+  #gem 'redgreen'   ### dont't WORK  !!!!
   #gem 'mynyml-redgreen'
   gem 'spork', '0.9.0.rc8'
   gem 'factory_girl_rails', '1.0'
