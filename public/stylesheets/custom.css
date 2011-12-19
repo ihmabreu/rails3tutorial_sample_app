@@ -194,3 +194,14 @@ div.field, div.actions {
   list-style: square;
 }
 
+/* index users  */
+
+ul.users {
+  margin-top: 1em;
+}
+
+.users li {
+  list-style: none;
+}
+
+
