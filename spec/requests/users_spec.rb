@@ -60,4 +60,36 @@ describe "Users" do
     end
   end
   
+  describe "when signed in as" do
+    
+    describe "an admin user" do
+    
+      before(:each) do
+        @user = Factory(:user)
+        @user.toggle!(:admin)
+        integration_sign_in(@user)
+      end
+      
+      it "should have a delete link" do
+        visit users_path
+        response.should have_selector("a", :href => user_path(@user),
+                                            :content => "delete")
+      end
+      
+    end
+    
+    describe "a normal user" do
+
+      before(:each) do
+        @user = Factory(:user)
+        integration_sign_in(@user)
+      end
+      
+      it "should not have a delete link" do
+        visit users_path
+        response.should_not have_selector("a", :href => user_path(@user), :content => "delete")
+      end
+    end
+  end
+  
 end
